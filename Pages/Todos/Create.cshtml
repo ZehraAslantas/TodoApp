@@ -1,0 +1,23 @@
+﻿@page
+@model TodoApp.Pages.Todos.CreateModel
+@using TodoApp.Models @*bunu biz ekledik*@
+
+@{
+    ViewData["Title"] = "Yeni Görev";
+}
+
+<h1 class="mb-3">Yeni Görev</h1>
+
+<form method="post" class="mt-3">
+    <partial name="_TodoForm" for="Todo" /> @*Todos çağırmak için bunu bi tanımla Create.cshtml.cs de*@
+    <div class="mt-3 d-flex gap-2">
+        <button type="submit" class="btn btn-success">Kaydet</button>
+        <a asp-page="Index" class=" btn btn-secondary">İptal</a> @*kullanıcı bu istekden vazgeçerse onu index sayfasına yönlendiren İptal tuşu eklendi*@
+    </div>
+</form>
+@section Scripts {
+    @*Yani o script bloğu formun çalışmasını değil; formun tarayıcıdan çıkmadan, anında ve hızlıca doğrulanmasını (validasyonunu) sağlar.
+
+    ve partial name e solution explorerdaki sınıfın adını verdik*@
+    <partial name="_ValidationScriptsPartial" />
+}
