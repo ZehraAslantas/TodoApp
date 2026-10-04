@@ -1,6 +1,5 @@
 ﻿using System.Collections.Concurrent;
 using TodoApp.Models;
-
 namespace TodoApp.Services;
 
 public class InMemoryTodoStore : ITodoStore
