@@ -1,11 +1,19 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using TodoApp.Repositories;
 using TodoApp.Services;
+using TodoApp.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+//doðrulama ve model baðlama mantýðý için
+builder.Services.AddFluentValidationAutoValidation(); //razor page modele baðlanýr.post edilen modeller bind edilirken tanýmlý Validatorlar otomatik çalýþacak ve hatalar model state e yazýlacak
+builder.Services.AddFluentValidationClientsideAdapters(); //FluentValidation kurallarýný JQuery'nin anlayacaðý formata çevir
+builder.Services.AddValidatorsFromAssemblyContaining<TodoValidator>();
 
 //veritabaný servis kaydý altta
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
