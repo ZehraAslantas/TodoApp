@@ -34,7 +34,7 @@ namespace TodoApp.Repositories.Config
             builder.HasIndex(x => x.IsDone); //tamamlandımı diye kullanıcı sorgularsa diye ekledik
 
             //şimdi aşağıda çekirdek dataları ekliyoruz
-            var today = DateTime.Today; //gün bilgisini alıyoruz ve altta hasdata ile params yapısı koyarak virgül ile sonsuz olarak veri ekliyoruz
+            var today = new DateTime(2026,11,7); //gün bilgisini alıyoruz ve altta hasdata ile params yapısı koyarak virgül ile sonsuz olarak veri ekliyoruz
             builder.HasData(
                 new Todo //Todo sınıfından nesne üretiyoruz ve guid ifadesi manuel verilmek zorunda
                 {
