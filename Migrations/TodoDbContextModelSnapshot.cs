@@ -65,7 +65,7 @@ namespace TodoApp.Migrations
                         {
                             Id = new Guid("11111111-1111-1111-1111-111111111111"),
                             Description = "Süt,ekmek,yumurta",
-                            DueDate = new DateTime(2026, 10, 6, 0, 0, 0, 0, DateTimeKind.Local),
+                            DueDate = new DateTime(2026, 11, 8, 0, 0, 0, 0, DateTimeKind.Local),
                             IsDone = false,
                             Priority = 1,
                             Title = "Alışveriş yap"
@@ -74,7 +74,7 @@ namespace TodoApp.Migrations
                         {
                             Id = new Guid("22222222-2222-2222-2222-222222222222"),
                             Description = "Pazartesi toplantısı için slaytlar",
-                            DueDate = new DateTime(2026, 10, 8, 0, 0, 0, 0, DateTimeKind.Local),
+                            DueDate = new DateTime(2026, 11, 10, 0, 0, 0, 0, DateTimeKind.Local),
                             IsDone = false,
                             Priority = 2,
                             Title = "Sunum Hazırla"
@@ -83,7 +83,7 @@ namespace TodoApp.Migrations
                         {
                             Id = new Guid("33333333-3333-3333-3333-333333333333"),
                             Description = "30 dk koşu",
-                            DueDate = new DateTime(2026, 10, 7, 0, 0, 0, 0, DateTimeKind.Local),
+                            DueDate = new DateTime(2026, 11, 9, 0, 0, 0, 0, DateTimeKind.Local),
                             IsDone = true,
                             Priority = 0,
                             Title = "Spor"
@@ -92,7 +92,7 @@ namespace TodoApp.Migrations
                         {
                             Id = new Guid("44444444-4444-4444-4444-444444444444"),
                             Description = "Yağ değişimi ve filtreler",
-                            DueDate = new DateTime(2026, 10, 12, 0, 0, 0, 0, DateTimeKind.Local),
+                            DueDate = new DateTime(2026, 11, 14, 0, 0, 0, 0, DateTimeKind.Local),
                             IsDone = false,
                             Priority = 1,
                             Title = "Araba bakımı"
